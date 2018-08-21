@@ -10,7 +10,7 @@ import java.util.Arrays;
 public enum LightShadePointOperatorEnum {
 
     /**
-     * 和值运算
+     * 和值运算，计算蓝球与每个红球的和
      */
     ADD {
         @Override
@@ -22,7 +22,7 @@ public enum LightShadePointOperatorEnum {
     },
 
     /**
-     * 差值运算
+     * 差值运算，计算蓝球与每个红球差的绝对值
      */
     SUBTRACT {
         @Override
@@ -34,7 +34,7 @@ public enum LightShadePointOperatorEnum {
     },
 
     /**
-     * 乘积运算
+     * 乘积运算，计算蓝球与每个红球的积
      */
     MULTIPLY {
         @Override
