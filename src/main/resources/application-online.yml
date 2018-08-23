@@ -1,0 +1,4 @@
+swagger:
+  host: www.caoyc.club/double-ball/
+logging:
+  file: ./my.log

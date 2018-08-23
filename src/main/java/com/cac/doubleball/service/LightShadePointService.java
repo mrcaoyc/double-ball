@@ -1,7 +1,5 @@
 package com.cac.doubleball.service;
 
-import com.cac.doubleball.model.DoubleBallGroupDTO;
-
 import java.util.List;
 
 /**
@@ -17,5 +15,5 @@ public interface LightShadePointService {
      * @param balls 上一期球号
      * @return 下一期预测球号
      */
-    List<DoubleBallGroupDTO> forecastNextByBalls(int[] balls);
+    List<Integer> forecastNextByBalls(int[] balls);
 }

@@ -1,6 +1,6 @@
 package com.cac.doubleball.enums;
 
-import com.cac.doubleball.model.DoubleBallGroupDTO;
+import com.cac.doubleball.consts.DoubleBallConst;
 
 import java.util.Arrays;
 
@@ -15,8 +15,8 @@ public enum LightShadePointOperatorEnum {
     ADD {
         @Override
         public int exec(int[] balls, LightShadePointTypeEnum lightShadePointTypeEnum) {
-            int[] addValues = Arrays.stream(balls).limit(DoubleBallGroupDTO.BALL_COUNT - 1)
-                    .map(value -> balls[DoubleBallGroupDTO.BALL_COUNT - 1] + value).toArray();
+            int[] addValues = Arrays.stream(balls).limit(DoubleBallConst.BALL_COUNT - 1)
+                    .map(value -> balls[DoubleBallConst.BALL_COUNT - 1] + value).toArray();
             return lightShadePointTypeEnum.exec(addValues);
         }
     },
@@ -27,8 +27,8 @@ public enum LightShadePointOperatorEnum {
     SUBTRACT {
         @Override
         public int exec(int[] balls, LightShadePointTypeEnum lightShadePointTypeEnum) {
-            int[] addValues = Arrays.stream(balls).limit(DoubleBallGroupDTO.BALL_COUNT - 1)
-                    .map(value -> Math.abs(balls[DoubleBallGroupDTO.BALL_COUNT - 1] - value)).toArray();
+            int[] addValues = Arrays.stream(balls).limit(DoubleBallConst.BALL_COUNT - 1)
+                    .map(value -> Math.abs(balls[DoubleBallConst.BALL_COUNT - 1] - value)).toArray();
             return lightShadePointTypeEnum.exec(addValues);
         }
     },
@@ -39,8 +39,8 @@ public enum LightShadePointOperatorEnum {
     MULTIPLY {
         @Override
         public int exec(int[] balls, LightShadePointTypeEnum lightShadePointTypeEnum) {
-            int[] addValues = Arrays.stream(balls).limit(DoubleBallGroupDTO.BALL_COUNT - 1)
-                    .map(value -> balls[DoubleBallGroupDTO.BALL_COUNT - 1] * value).toArray();
+            int[] addValues = Arrays.stream(balls).limit(DoubleBallConst.BALL_COUNT - 1)
+                    .map(value -> balls[DoubleBallConst.BALL_COUNT - 1] * value).toArray();
             return lightShadePointTypeEnum.exec(addValues);
         }
     };
